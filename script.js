@@ -1,9 +1,16 @@
 
 const element = document.getElementById("button")
-element.addEventListener('click', function() {
-    alert("on click handler")
+let label = document.getElementById('text')
+let count = 0; element.addEventListener('click', function()
+{
+    count++
+    if (count == 1) {
+        label.textContent = `clicked ${count} time`
+    }   
+    else {
+        label.textContent = `clicked ${count} times`
+    }
 })
 
-let label = document.getElementById('text')
-let count = 0
-label.textContent = `clicked ${count} times`
+
+
